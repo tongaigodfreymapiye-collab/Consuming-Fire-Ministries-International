@@ -54,3 +54,14 @@ The Projector page now includes a Ready-to-project church slides library with th
 
 ## Bible text availability
 The projector includes Bible search/import tools and links to KJV, AMP, and ERV online reference pages. Complete KJV text can be imported from a public-domain source file. Complete AMP and ERV text is not bundled because those translations are copyrighted; import them only if CFMI has permission or a licence for the intended use. Online links require internet access; locally imported text is stored in that browser on that device. This GitHub Pages site has no shared server database, so imports do not automatically sync to other devices.
+
+## Projector Studio features
+- Song library search and custom song entry, plus a service-order playlist.
+- Bible verse entry/search and import of a Bible dataset; complete texts must be imported/downloaded separately and only from authorised/public-domain sources.
+- Announcement slides, 30 built-in offline gradient backgrounds, and a custom background image.
+- Local media upload for images, PDFs, video and audio; PowerPoint files should be converted to PDF for reliable browser projection.
+- Ten supplied CFMI PowerPoint presentations are also included as PDF decks in `assets/slides/`.
+- Separate live-output page (`output.html`) can be opened from Projector Studio. Keep the control panel on the laptop and move the live-output window to the projector using the operating system's extended-display mode.
+- Countdown timer, black-screen control, keyboard navigation, service plan import/export, and local browser saving.
+
+The site is static and does not provide cloud sync or multi-device control. Browser storage is local to the browser/origin. Uploaded local media should be reselected after a reload unless you keep it in the same session. Test the entire service on the actual projector before the congregation arrives.
