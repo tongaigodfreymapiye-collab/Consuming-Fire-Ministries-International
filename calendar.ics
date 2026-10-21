@@ -2,20 +2,22 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//CFMI//Church Calendar//EN
 CALSCALE:GREGORIAN
+METHOD:PUBLISH
 BEGIN:VEVENT
-UID:cfmi-sunday-worship-20261025@example.invalid
-DTSTAMP:20261021T000000Z
+UID:cfmi-sunday-worship-20261025@cfmi
+DTSTAMP:20261021T210000Z
 DTSTART;VALUE=DATE:20261025
 SUMMARY:Sunday Worship Service
 DESCRIPTION:Weekly worship and fellowship. Confirm service details with CFMI.
+LOCATION:CFMI
 END:VEVENT
 BEGIN:VEVENT
-UID:cfmi-anniversary-20261115@example.invalid
-DTSTAMP:20261021T000000Z
-DTSTART:20261115T140000
-DTEND:20261115T170000
+UID:cfmi-anniversary-20261115@cfmi
+DTSTAMP:20261021T210000Z
+DTSTART;TZID=Africa/Harare:20261115T140000
+DTEND;TZID=Africa/Harare:20261115T170000
 SUMMARY:CFMI 12th Anniversary Celebration
+DESCRIPTION:Theme: Great is thy faithfulness.
 LOCATION:Independent African Church, next to Regina Mundi, Old Highfield, Harare
-DESCRIPTION:Celebrating 12 years of God's faithfulness. Theme: Great is thy faithfulness.
 END:VEVENT
 END:VCALENDAR

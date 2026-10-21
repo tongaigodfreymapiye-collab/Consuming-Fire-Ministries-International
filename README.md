@@ -65,3 +65,19 @@ The projector includes Bible search/import tools and links to KJV, AMP, and ERV 
 - Countdown timer, black-screen control, keyboard navigation, service plan import/export, and local browser saving.
 
 The site is static and does not provide cloud sync or multi-device control. Browser storage is local to the browser/origin. Uploaded local media should be reselected after a reload unless you keep it in the same session. Test the entire service on the actual projector before the congregation arrives.
+
+
+## Link repair and validation (21 October 2026)
+
+- Restored `assets/cfmi-logo-short.png` from the supplied CFMI logo file without altering the image.
+- Restored `assets/cfmi-12th-anniversary.png` from the supplied anniversary artwork.
+- Added `events.json` and `calendar.ics`, both referenced by the public site.
+- Checked local `href`/`src` references in `index.html`, `projector.html`, and `output.html`; no unresolved local references were found.
+- Checked inline JavaScript syntax for those three pages with Node.js.
+
+This is a static GitHub Pages application. Browser syntax and local-link checks do not substitute for testing the deployed website, projector hardware, browser media codecs, or a live Teams meeting. Uploaded media and service data have browser/device-specific limitations.
+
+
+## Branches
+- Old Highfield Assembly — Pastor & Mrs V. Mutana (photo in `assets/old-highfield-pastors-mutana.png`).
+- Harare City Assembly — marked Coming Soon.
