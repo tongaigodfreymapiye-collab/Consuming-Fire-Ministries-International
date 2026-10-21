@@ -20,3 +20,30 @@ Open `index.html` in a browser. Keep the `assets` folder beside `index.html`; th
 - This is the public static website only. A static GitHub Pages site cannot run the private database/API for member registers, finances, service management, or live projection.
 - Official social media links are included. Automatic display of every new Facebook/YouTube post requires API integration in a separately hosted backend.
 - Confirm public church details and event dates before publishing.
+
+
+## Projector and calendar additions
+- `projector.html`: browser-based service studio with preview, Bible verse slides, local image/video/audio/PDF preview where supported, service order and export.
+- `events.json`: editable public calendar event list (edit this file and the calendar script in `index.html` when adding events).
+- `calendar.ics`: sample calendar subscription/download file; update it when event dates change.
+
+### Important capability notes
+- This is a static GitHub Pages package. It has no shared server database or user authentication.
+- Local browser storage is device-specific. Export service plans for backup.
+- PowerPoint (`.ppt`/`.pptx`) files are detected and listed but not rendered slide-by-slide in the browser. For reliable projection, open them in Microsoft PowerPoint or export to PDF/images.
+- Full-screen projection is browser full-screen, not a native Windows projector/PowerPoint controller. Test on the church computer before a live service.
+- Calendar dates should be verified with church leadership before publishing.
+
+
+## Bible and Songs
+- The Service Studio includes searchable sample Bible verses and a searchable starter hymn list.
+- Add custom Bible references and verse text, and add song titles and lyrics to the service order.
+- The included Bible data is only a small starter set, not a complete Bible. Full Bible search requires importing a translation that the church is authorised to use.
+- Song lyrics should be supplied by the church or used under the relevant copyright/licensing permissions. The starter hymn examples are traditional/public-domain hymn text excerpts.
+- This static starter does not sync a shared library between devices; entries added interactively are held for the current browser session.
+
+
+## Full offline Bible versions
+The projector now includes an offline Bible version selector for KJV, Amplified (AMP), and Easy-to-Read Version (ERV), plus a local import manager. Import a complete Bible file in JSON, TXT (`Reference | verse text` per line), or CSV (`reference,text`) format. Imported verses are stored in the browser's IndexedDB and remain available offline on that device.
+
+The ZIP does not bundle complete Amplified or ERV texts because those translations are copyrighted and redistribution requires permission. The initial KJV search list is a sample until a complete public-domain KJV file is imported. Use a complete KJV JSON corpus from a source whose terms permit your intended use, and obtain authorised AMP/ERV files from the rights holders or a licensed provider. Data imported on one device does not automatically sync to other devices.
