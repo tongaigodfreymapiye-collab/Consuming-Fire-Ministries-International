@@ -47,3 +47,10 @@ Open `index.html` in a browser. Keep the `assets` folder beside `index.html`; th
 The projector now includes an offline Bible version selector for KJV, Amplified (AMP), and Easy-to-Read Version (ERV), plus a local import manager. Import a complete Bible file in JSON, TXT (`Reference | verse text` per line), or CSV (`reference,text`) format. Imported verses are stored in the browser's IndexedDB and remain available offline on that device.
 
 The ZIP does not bundle complete Amplified or ERV texts because those translations are copyrighted and redistribution requires permission. The initial KJV search list is a sample until a complete public-domain KJV file is imported. Use a complete KJV JSON corpus from a source whose terms permit your intended use, and obtain authorised AMP/ERV files from the rights holders or a licensed provider. Data imported on one device does not automatically sync to other devices.
+
+
+## Projector Studio: included presentation decks
+The Projector page now includes a Ready-to-project church slides library with these supplied presentations converted to PDF: Do Something New in My Life; Jesus at the Centre; Musandipfuure Jesu; My God Is Awesome; Ngatimukudze Mwari; Praise and Worship; Sunday Message – August 9; Withholding Nothing; You Are All That Matters; and You Are Yahweh. Select **Add to service**, then **Preview** or **Open full-screen projection**. PDF navigation is handled by the browser's PDF viewer.
+
+## Bible text availability
+The projector includes Bible search/import tools and links to KJV, AMP, and ERV online reference pages. Complete KJV text can be imported from a public-domain source file. Complete AMP and ERV text is not bundled because those translations are copyrighted; import them only if CFMI has permission or a licence for the intended use. Online links require internet access; locally imported text is stored in that browser on that device. This GitHub Pages site has no shared server database, so imports do not automatically sync to other devices.
