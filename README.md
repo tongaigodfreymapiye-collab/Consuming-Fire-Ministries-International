@@ -81,3 +81,10 @@ This is a static GitHub Pages application. Browser syntax and local-link checks 
 ## Branches
 - Old Highfield Assembly — Pastor & Mrs V. Mutana (photo in `assets/old-highfield-pastors-mutana.png`).
 - Harare City Assembly — marked Coming Soon.
+
+
+## New website features (October 2026)
+- Homepage scrolling announcement ticker and teaching category filters.
+- Teaching library category filters for Salvation, Deliverance, Faith, Bible Studies, Gospel, Theology, Discipleship, Spiritual Growth, Marriage and Family, Leadership, Worship, Prayer, Love, Giving, Revival, Youths, Victory, Breakthroughs and Testimonies.
+- Testimonies page (`testimonies.html`) includes Supabase email/password sign-in, submission, and published testimony display. It is intentionally disabled until a church administrator configures the Supabase project URL/public anon key in `supabase-config.js` and runs `supabase-testimonies-schema.sql`. Submissions default to pending for moderation. Never place a Supabase service-role key in this public site.
+- Projector background selection is now in the preview workspace. It supports built-in offline motion gradients, custom image backgrounds, and custom MP4/WebM/OGG motion-video backgrounds. Built-in motion effects are original CSS designs; the project does not redistribute third-party videos.
