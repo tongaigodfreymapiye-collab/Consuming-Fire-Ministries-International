@@ -32,7 +32,9 @@
     .featured-book-copy .book-subtitle{font:italic 20px/1.5 var(--serif);color:#76501b}
     .featured-book-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
     @media(max-width:760px){.featured-book-inner{grid-template-columns:1fr}.featured-book-cover{max-width:480px;margin:auto}.featured-book-copy{text-align:center}.featured-book-actions{justify-content:center}}
-    </style>
+    
+.teachings .card.teaching-card-clickable{cursor:pointer;transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease}.teachings .card.teaching-card-clickable:hover,.teachings .card.teaching-card-clickable:focus-visible{transform:translateY(-2px);border-color:var(--gold,#e8ae42);box-shadow:0 8px 24px #10182712;outline:none}.teachings .card.teaching-card-clickable:focus-visible{outline:2px solid var(--gold,#e8ae42);outline-offset:3px}
+</style>
 </head>
 <body>
   <div class="announcement"><span class="dot"></span><span>Welcome to Consuming Fire Ministries International</span><span class="right">Building faith. Serving people. Proclaiming Christ.</span></div>
@@ -233,5 +235,9 @@
       nav.classList.remove('open'); menuButton.setAttribute('aria-expanded','false'); menuButton.textContent='☰';
     }));
   </script>
+
+<script id="cfmi-clickable-teaching-cards">
+(()=>{document.querySelectorAll('.teachings .cards .card').forEach(card=>{const link=card.querySelector('.card-foot a[href]');if(!link)return;card.classList.add('teaching-card-clickable');card.setAttribute('role','link');card.setAttribute('tabindex','0');card.setAttribute('aria-label','Open teaching: '+(card.querySelector('h3')?.textContent.trim()||link.textContent.trim()));card.addEventListener('click',e=>{if(e.target.closest('a,button,input,select,textarea'))return;location.href=link.href});card.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target===card){e.preventDefault();location.href=link.href}})});})();
+</script>
 </body>
 </html>
