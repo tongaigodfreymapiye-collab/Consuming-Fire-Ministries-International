@@ -44,6 +44,7 @@
     .live-layout{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(240px,.8fr);gap:26px;align-items:stretch;margin-top:32px}
     .live-player-wrap{background:#05070b;border:1px solid #ffffff24;border-radius:12px;overflow:hidden;box-shadow:0 18px 45px #0003}
     .live-player{position:relative;width:100%;aspect-ratio:16/9;background:#05070b}
+     .live-tv-image-button{position:absolute;right:12px;bottom:12px;display:block;width:clamp(120px,24%,245px);aspect-ratio:16/9;border:2px solid #e8ae42;border-radius:9px;overflow:hidden;background:#101827;box-shadow:0 8px 24px #0009;z-index:3;transition:transform .2s ease,box-shadow .2s ease}.live-tv-image-button:hover,.live-tv-image-button:focus-visible{transform:scale(1.035);box-shadow:0 12px 30px #000b;outline:3px solid #fff;outline-offset:2px}.live-tv-image-button img{display:block;width:100%;height:100%;object-fit:contain} @media(max-width:560px){.live-tv-image-button{right:7px;bottom:7px;width:34%;border-width:1px;border-radius:5px}}
     .live-player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
     .live-info{border:1px solid #ffffff24;border-radius:12px;padding:25px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;background:#ffffff08}
     .live-badge{display:inline-flex;align-items:center;gap:8px;font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#ffd6d4;background:#df29261f;border:1px solid #df29264a;border-radius:99px;padding:7px 11px}
@@ -278,6 +279,7 @@
         <div class="live-player-wrap">
           <div class="live-player">
             <iframe src="https://www.youtube.com/embed/live_stream?channel=UC_Q8Nerdc368QOHyoJnsR3w" title="Consuming Fire Ministries International live stream" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+            <a class="live-tv-image-button" href="https://www.youtube.com/channel/UC_Q8Nerdc368QOHyoJnsR3w/live" target="_blank" rel="noopener noreferrer" aria-label="Open Consuming Fire Ministries International TV on YouTube Live" title="Watch CFMI TV on YouTube Live"><img src="assets/cfmi-tv-splash.webp" alt="Welcome to Consuming Fire Ministries International TV — click to watch YouTube Live"></a>
           </div>
         </div>
         <aside class="live-info">
