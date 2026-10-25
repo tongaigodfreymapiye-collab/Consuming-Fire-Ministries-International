@@ -3,7 +3,7 @@
 This is a static, responsive public website for Consuming Fire Ministries International.
 
 ## Important: original logo preserved
-`assets/cfmi-logo.png` is copied byte-for-byte from the uploaded original logo. The HTML uses the image as-is: no recolouring, redrawing, cropping, filtering, or editing. The anniversary artwork is also copied as supplied.
+`assets/cfmi-logo.webp` is copied byte-for-byte from the uploaded original logo. The HTML uses the image as-is: no recolouring, redrawing, cropping, filtering, or editing. The anniversary artwork is also copied as supplied.
 
 ## Publish with GitHub Pages
 1. Create or open your GitHub repository.
@@ -70,7 +70,7 @@ The site is static and does not provide cloud sync or multi-device control. Brow
 ## Link repair and validation (21 October 2026)
 
 - Restored `assets/cfmi-logo-short.png` from the supplied CFMI logo file without altering the image.
-- Restored `assets/cfmi-12th-anniversary.png` from the supplied anniversary artwork.
+- Restored `assets/cfmi-12th-anniversary.webp` from the supplied anniversary artwork.
 - Added `events.json` and `calendar.ics`, both referenced by the public site.
 - Checked local `href`/`src` references in `index.html`, `projector.html`, and `output.html`; no unresolved local references were found.
 - Checked inline JavaScript syntax for those three pages with Node.js.
@@ -79,7 +79,7 @@ This is a static GitHub Pages application. Browser syntax and local-link checks 
 
 
 ## Branches
-- Old Highfield Assembly — Pastor & Mrs V. Mutana (photo in `assets/old-highfield-pastors-mutana.png`).
+- Old Highfield Assembly — Pastor & Mrs V. Mutana (photo in `assets/old-highfield-pastors-mutana.webp`).
 - Harare City Assembly — marked Coming Soon.
 
 
