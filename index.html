@@ -122,7 +122,19 @@
       .slide-indicators{bottom:44px}
       .slideshow-foot{min-height:34px;font-size:6px;letter-spacing:.04em;padding:0 4%;gap:8px}
     }
-  </style>
+  
+    /* Accessible image-based social buttons; images remain uncropped. */
+    .social-image-button{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:48px;padding:7px 12px;border:1px solid #ffffff30;border-radius:10px;background:#fff;text-decoration:none;transition:transform .18s ease,box-shadow .18s ease}
+    .social-image-button:hover,.social-image-button:focus-visible{transform:translateY(-2px);box-shadow:0 7px 20px #0003;outline:3px solid #f2c45e;outline-offset:2px}
+    .social-image-button img{display:block;width:clamp(42px,5vw,64px);height:38px;object-fit:contain}
+    .social-image-button.facebook-button img{width:43px;height:43px}
+    .social-image-button span{font-size:11px;font-weight:700;color:#202b3c;white-space:nowrap}
+    .live-actions .social-image-button{min-height:54px}
+    .live-actions .social-image-button img{height:38px;width:58px}
+    .social-card .social-cta.social-image-button{justify-content:center;margin-top:12px;padding:8px 12px;border:1px solid #e7eaf0;border-radius:9px}
+    @media(max-width:480px){.live-actions .social-image-button{flex:1;min-width:0}.live-actions .social-image-button span{white-space:normal}.social-image-button img{width:42px;height:34px}}
+
+</style>
 </head>
 <body>
   <div class="announcement"><span class="dot"></span><span>Welcome to Consuming Fire Ministries International</span><span class="right">Building faith. Serving people. Proclaiming Christ.</span></div>
@@ -286,7 +298,7 @@
           <div class="live-badge"><span></span> Live broadcast</div>
           <h3>Worship with us</h3>
           <p>Join our services, worship, prayer and the teaching of God’s Word. If the player does not show a broadcast, visit our official YouTube channel to check for a live or scheduled service.</p>
-          <div class="live-actions"><a class="btn btn-gold" href="https://www.youtube.com/channel/UC_Q8Nerdc368QOHyoJnsR3w/live" target="_blank" rel="noopener noreferrer">Open YouTube Live ↗</a><a class="btn btn-outline" href="https://www.facebook.com/consumingfireministriesZimbabwe/" target="_blank" rel="noopener noreferrer">Facebook ↗</a></div>
+          <div class="live-actions"><a class="social-image-button youtube-button" href="https://www.youtube.com/channel/UC_Q8Nerdc368QOHyoJnsR3w/live" target="_blank" rel="noopener noreferrer" aria-label="Open CFMI YouTube Live"><img src="assets/youtube.webp" alt="YouTube logo"><span>Watch YouTube Live ↗</span></a><a class="social-image-button facebook-button" href="https://www.facebook.com/consumingfireministriesZimbabwe/" target="_blank" rel="noopener noreferrer" aria-label="Open CFMI Facebook"><img src="assets/facebook-3d-icon.webp" alt="Facebook logo"><span>Visit Facebook ↗</span></a></div>
           <p class="live-note">The stream appears when YouTube makes a live broadcast available. This website does not start or control the broadcast.</p>
         </aside>
       </div>
@@ -295,8 +307,8 @@
     <section class="section media" id="media">
       <div class="section-head"><div><div class="eyebrow"><span></span>Stay connected</div><h2 class="section-title">Messages &amp; <em>community</em></h2><p class="subtitle">Follow CFMI online for teachings, updates and ministry moments.</p></div></div>
       <div class="social-grid">
-        <article class="social-card"><div class="social-head"><div class="social-icon">▶</div><div><h3>YouTube</h3><p>Watch teachings and messages</p></div><a href="https://www.youtube.com/@consumingfireministriesint5007" target="_blank" rel="noopener noreferrer" aria-label="Open CFMI YouTube">↗</a></div><div class="social-copy"><strong>CFMI on YouTube</strong>Visit the official channel for the latest videos, sermons and ministry messages.</div><a class="social-cta" href="https://www.youtube.com/@consumingfireministriesint5007" target="_blank" rel="noopener noreferrer">Visit YouTube channel <span>↗</span></a></article>
-        <article class="social-card"><div class="social-head"><div class="social-icon facebook">f</div><div><h3>Facebook</h3><p>Church news and announcements</p></div><a href="https://www.facebook.com/consumingfireministriesZimbabwe/" target="_blank" rel="noopener noreferrer" aria-label="Open CFMI Facebook">↗</a></div><div class="social-copy"><strong>CFMI on Facebook</strong>Follow the official page for community updates, events and announcements.</div><a class="social-cta" href="https://www.facebook.com/consumingfireministriesZimbabwe/" target="_blank" rel="noopener noreferrer">Visit Facebook page <span>↗</span></a></article>
+        <article class="social-card"><div class="social-head"><div class="social-icon">▶</div><div><h3>YouTube</h3><p>Watch teachings and messages</p></div><a href="https://www.youtube.com/@consumingfireministriesint5007" target="_blank" rel="noopener noreferrer" aria-label="Open CFMI YouTube">↗</a></div><div class="social-copy"><strong>CFMI on YouTube</strong>Visit the official channel for the latest videos, sermons and ministry messages.</div><a class="social-cta social-image-button" href="https://www.youtube.com/@consumingfireministriesint5007" target="_blank" rel="noopener noreferrer" aria-label="Visit CFMI YouTube channel"><img src="assets/youtube.webp" alt="YouTube logo"><span>Visit YouTube channel ↗</span></a></article>
+        <article class="social-card"><div class="social-head"><div class="social-icon facebook">f</div><div><h3>Facebook</h3><p>Church news and announcements</p></div><a href="https://www.facebook.com/consumingfireministriesZimbabwe/" target="_blank" rel="noopener noreferrer" aria-label="Open CFMI Facebook">↗</a></div><div class="social-copy"><strong>CFMI on Facebook</strong>Follow the official page for community updates, events and announcements.</div><a class="social-cta social-image-button facebook-button" href="https://www.facebook.com/consumingfireministriesZimbabwe/" target="_blank" rel="noopener noreferrer" aria-label="Visit CFMI Facebook page"><img src="assets/facebook-3d-icon.webp" alt="Facebook logo"><span>Visit Facebook page ↗</span></a></article>
       </div>
     </section>
     <section class="contact" id="contact"><div><div class="eyebrow light"><span></span>Connect with us</div><h2>Let's grow in faith <em>together.</em></h2><p>For prayer, ministry enquiries, or further information, get in touch with CFMI through our official social channels.</p></div><div class="contact-actions"><a class="btn btn-whatsapp" href="https://wa.me/263772479159" target="_blank" rel="noopener noreferrer">Chat on WhatsApp ↗</a><a class="btn btn-gold" href="https://www.facebook.com/consumingfireministriesZimbabwe/" target="_blank" rel="noopener noreferrer">Message on Facebook ↗</a><a class="btn btn-outline" href="https://www.youtube.com/@consumingfireministriesint5007" target="_blank" rel="noopener noreferrer">Watch on YouTube ▶</a></div></section>
