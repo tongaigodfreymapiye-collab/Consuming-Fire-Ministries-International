@@ -79,6 +79,48 @@
     .slideshow-foot b{color:#e8ae42}
     @media(max-width:700px){.slideshow-stage{height:clamp(430px,105vw,610px);min-height:430px}.slide img{object-fit:contain}.slideshow-shade{background:linear-gradient(0deg,rgba(5,7,12,.8) 0%,rgba(5,7,12,.12) 70%)}.slideshow-caption{left:7%;right:7%;bottom:15%;max-width:none}.slideshow-kicker{font-size:8px;letter-spacing:.12em}.slideshow-caption p{font-size:22px;margin:10px 0 14px}.slide-arrow{width:34px;height:44px;font-size:28px}.slide-prev{left:8px}.slide-next{right:8px}.slide-indicators{bottom:51px}.slideshow-foot{font-size:6px;letter-spacing:.08em;padding:0 5%;gap:10px}.slideshow-actions .btn{padding:10px 12px;font-size:10px}}
     @media(prefers-reduced-motion:reduce){.slide,.slide-arrow,.slide-indicator{transition:none}.slide{transform:none}}
+
+    /* Final responsive fit: prevent horizontal page scrolling and keep every original slide fully visible. */
+    html,body{width:100%;max-width:100%;overflow-x:hidden}
+    img,video,iframe{max-width:100%}
+    .header{min-width:0;max-width:100%;gap:clamp(8px,1vw,16px);padding-left:3%;padding-right:3%}
+    .brand{min-width:190px;flex-shrink:0}
+    .nav{gap:clamp(9px,1vw,15px);min-width:0}
+    .nav a{font-size:clamp(10px,.82vw,12px)}
+    .header-cta,.header-whatsapp{flex-shrink:0;padding-left:10px;padding-right:10px}
+    .slideshow-stage{height:clamp(320px,calc(100vh - 180px),680px);min-height:320px;max-height:680px;width:100%;max-width:100%;}
+    .slide{inset:0;overflow:hidden}
+    .slide img{width:100%;height:100%;object-fit:contain;object-position:center center;}
+    .slideshow-shade{background:linear-gradient(0deg,rgba(5,7,12,.48),transparent 24%);}
+    @media(max-width:1450px){
+      .header{gap:10px}
+      .brand{min-width:190px;gap:8px}
+      .brand-logo{width:62px}
+      .brand-name{font-size:12px}
+      .brand-sub{font-size:7px}
+      .nav{gap:clamp(7px,.8vw,11px)}
+      .nav a{font-size:10px}
+      .header-whatsapp{display:none}
+      .header-cta{padding:10px 11px;font-size:10px}
+    }
+    @media(max-width:1120px){
+      .nav{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;padding:14px 5% 20px;box-shadow:0 15px 25px #11182712;align-items:stretch;flex-direction:column;gap:2px;max-height:75vh;overflow:auto}
+      .nav.open{display:flex}
+      .nav a{font-size:12px;padding:10px 0}
+      .header{height:76px}
+      .menu-button{display:block;flex:none}
+      .header-cta{display:none}
+      .brand{min-width:0}
+    }
+    @media(max-width:760px){
+      .slideshow-stage{height:clamp(300px,62vh,510px);min-height:300px}
+      .slide img{object-fit:contain}
+      .slideshow-caption{left:6%;right:6%;bottom:13%;max-width:none}
+      .slideshow-caption p{font-size:clamp(18px,5vw,24px);margin:8px 0 10px}
+      .slideshow-actions .btn{padding:9px 11px;font-size:10px}
+      .slide-indicators{bottom:44px}
+      .slideshow-foot{min-height:34px;font-size:6px;letter-spacing:.04em;padding:0 4%;gap:8px}
+    }
   </style>
 </head>
 <body>
@@ -337,12 +379,11 @@
     dots.forEach((dot,i)=>{const active=i===current;dot.classList.toggle('active',active);if(active)dot.setAttribute('aria-current','true');else dot.removeAttribute('aria-current');});
   }
   function stop(){if(timer){clearInterval(timer);timer=null;}}
-  function start(){stop();if(!reduceMotion)timer=setInterval(()=>show(current+1),6500);}
+  function start(){stop();timer=setInterval(()=>show(current+1),6500);}
   previous.addEventListener('click',()=>{show(current-1);start();});
   next.addEventListener('click',()=>{show(current+1);start();});
   dots.forEach((dot,i)=>dot.addEventListener('click',()=>{show(i);start();}));
-  stage.addEventListener('mouseenter',stop);
-  stage.addEventListener('mouseleave',start);
+  // Keep automatic rotation running even when the pointer rests over the slideshow.
   stage.addEventListener('focusin',stop);
   stage.addEventListener('focusout',start);
   stage.addEventListener('touchstart',e=>{touchStartX=e.changedTouches[0].clientX;},{passive:true});
