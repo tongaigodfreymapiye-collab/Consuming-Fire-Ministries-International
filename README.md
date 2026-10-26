@@ -88,3 +88,10 @@ This is a static GitHub Pages application. Browser syntax and local-link checks 
 - Teaching library category filters for Salvation, Deliverance, Faith, Bible Studies, Gospel, Theology, Discipleship, Spiritual Growth, Marriage and Family, Leadership, Worship, Prayer, Love, Giving, Revival, Victory, Breakthroughs and Testimonies.
 - Testimonies page (`testimonies.html`) includes Supabase email/password sign-in, submission, and published testimony display. It is intentionally disabled until a church administrator configures the Supabase project URL/public anon key in `supabase-config.js` and runs `supabase-testimonies-schema.sql`. Submissions default to pending for moderation. Never place a Supabase service-role key in this public site.
 - Projector background selection is now in the preview workspace. It supports built-in offline motion gradients, custom image backgrounds, and custom MP4/WebM/OGG motion-video backgrounds. Built-in motion effects are original CSS designs; the project does not redistribute third-party videos.
+
+
+## Community accounts, prayer requests and testimonies
+- `community.html` provides sign-up/sign-in, public usernames, prayer requests, testimonies, and a public feed. Email addresses are used only by Supabase Auth and are not included in public post queries or rendered in the UI.
+- Posts are submitted as `pending` and are not public until a church moderator approves them in Supabase.
+- To enable the service, follow `COMMUNITY-SETUP.md`, replace the public project URL and anon key in `supabase-config.js`, and run `supabase-community-schema.sql` in the Supabase SQL Editor. Do not put a Supabase service-role key in this repository.
+- The Watch Live section includes navigation controls for YouTube/Facebook, refresh, and full screen. These controls do not start/stop the actual broadcast. YouTube's channel live embed can show the current live stream. Facebook's current live video cannot be reliably auto-discovered by a static page without a secure backend and the required Meta API permissions; the page embed and official Facebook link are fallbacks.

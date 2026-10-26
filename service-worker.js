@@ -1,9 +1,9 @@
 'use strict';
-const CACHE_NAME = 'cfmi-bible-offline-v1';
+const CACHE_NAME = 'cfmi-bible-offline-v3';
 const CORE_FILES = [
   './', './index.html', './bible.html', './teachings.html',
   './assets/bible/kjv-data.js', './assets/js/reading-plan.js', './assets/js/bible-app.js',
-  './assets/open-bible.svg', './assets/cfmi-logo-short.png', './favicon.svg'
+  './assets/open-bible.svg', './assets/cfmi-logo-short.png', './favicon.svg', './community.html', './supabase-config.js'
 ];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(CORE_FILES)).then(() => self.skipWaiting()));

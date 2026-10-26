@@ -145,7 +145,7 @@
       <span class="brand-name">CONSUMING FIRE<span class="brand-sub">MINISTRIES INTERNATIONAL</span></span>
     </a>
     <nav class="nav" id="main-nav" aria-label="Main navigation">
-      <a href="#home">Home</a><a href="#about">About</a><a href="#vision">Vision</a><a href="#branches">Branches</a><a href="#teachings">Teachings</a><a href="testimonies.html">Testimonies</a><a href="#events">Events</a><a href="#calendar">Calendar</a><a href="bible.html">Read Bible</a><a href="#projector">Projector</a><a href="#watch-live">Watch Live</a><a href="#media">Media</a><a href="#contact">Contact</a>
+      <a href="#home">Home</a><a href="#about">About</a><a href="#vision">Vision</a><a href="#branches">Branches</a><a href="#teachings">Teachings</a><a href="community.html">Prayer &amp; Testimonies</a><a href="#events">Events</a><a href="#calendar">Calendar</a><a href="bible.html">Read Bible</a><a href="#projector">Projector</a><a href="#watch-live">Watch Live</a><a href="#media">Media</a><a href="#contact">Contact</a>
     </nav>
     <a class="header-cta header-whatsapp-primary" href="https://wa.me/263711493456" target="_blank" rel="noopener noreferrer" aria-label="Contact CFMI on WhatsApp at +263 711 493 456">WhatsApp ↗</a><a class="header-whatsapp" href="https://wa.me/263772479159" target="_blank" rel="noopener noreferrer" aria-label="Chat with CFMI on WhatsApp">WhatsApp</a>
     <button class="menu-button" id="menu-button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
@@ -269,7 +269,6 @@
         <article class="card" data-category="giving"><div class="card-symbol"><img src="assets/open-bible.svg" alt="Open Bible" loading="lazy"></div><div class="card-category">Giving</div><h3>Offerings and Sacrifices in the Bible</h3><p>A biblical overview of offerings, sacrifices, and their place in Scripture.</p><div class="card-foot"><span>2 Corinthians 9:7</span><a href="teaching-offerings.html">Read teaching →</a></div></article>
         <article class="card" data-category="preaching"><div class="card-symbol"><img src="assets/open-bible.svg" alt="Open Bible" loading="lazy"></div><div class="card-category">Preaching</div><h3>Guidelines for Preaching</h3><p>Practical guidance for preparing and delivering biblical messages faithfully.</p><div class="card-foot"><span>2 Timothy 4:2</span><a href="teaching-preaching.html">Read teaching →</a></div></article>
         <article class="card" data-category="worship & music"><div class="card-symbol"><img src="assets/open-bible.svg" alt="Open Bible" loading="lazy"></div><div class="card-category">Worship & Music</div><h3>Guidelines for Selection of Songs for Church Meetings</h3><p>Guidance for selecting songs that serve the message, congregation, and worship meeting.</p><div class="card-foot"><span>Colossians 3:16</span><a href="teaching-song-selection.html">Read teaching →</a></div></article>
-        <article class="card" data-category="worship & music"><div class="card-symbol"><img src="assets/open-bible.svg" alt="Open Bible" loading="lazy"></div><div class="card-category">Worship & Music</div><h3>Praise and Worship</h3><p>CFMI music ministry guidance on praise, worship, and serving the church through music.</p><div class="card-foot"><span>John 4:23–24</span><a href="teaching-worship.html">Read teaching →</a></div></article>
       </div>
       
     </section>
@@ -296,11 +295,17 @@
 
     <section class="section watch-live" id="watch-live" aria-labelledby="watch-live-title">
       <div class="section-head"><div><div class="eyebrow light"><span></span>Join us online</div><h2 class="section-title" id="watch-live-title">CFMI <em>Watch Live</em></h2><p class="subtitle">Worship with Consuming Fire Ministries International from wherever you are. When a broadcast is live on our YouTube channel, it can appear in the player below.</p></div></div>
+      <div class="live-stream-controls" role="group" aria-label="Live stream navigation" style="display:flex;gap:9px;flex-wrap:wrap;margin:0 0 14px">
+        <button class="btn btn-gold" type="button" id="stream-youtube" aria-pressed="true">Watch YouTube</button>
+        <button class="btn btn-outline" type="button" id="stream-facebook" aria-pressed="false">Facebook page</button>
+        <button class="btn btn-outline" type="button" id="stream-refresh">Refresh player</button>
+        <button class="btn btn-outline" type="button" id="stream-fullscreen">Full screen</button>
+      </div>
       <div class="live-layout">
-        <div class="live-player-wrap">
-          <div class="live-player">
-            <iframe src="https://www.youtube.com/embed/live_stream?channel=UC_Q8Nerdc368QOHyoJnsR3w" title="Consuming Fire Ministries International live stream" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
-            <a class="live-tv-image-button" href="https://www.youtube.com/channel/UC_Q8Nerdc368QOHyoJnsR3w/live" target="_blank" rel="noopener noreferrer" aria-label="Open Consuming Fire Ministries International TV on YouTube Live" title="Watch CFMI TV on YouTube Live"><img src="assets/cfmi-tv-splash.webp" alt="Welcome to Consuming Fire Ministries International TV — click to watch YouTube Live"></a>
+        <div class="live-player-wrap" id="live-player-wrap">
+          <div class="live-player" id="live-player">
+            <iframe id="cfmi-live-iframe" src="https://www.youtube.com/embed/live_stream?channel=UC_Q8Nerdc368QOHyoJnsR3w" title="Consuming Fire Ministries International live stream" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+            <a class="live-tv-image-button" id="live-tv-image-button" href="https://www.youtube.com/channel/UC_Q8Nerdc368QOHyoJnsR3w/live" target="_blank" rel="noopener noreferrer" aria-label="Open Consuming Fire Ministries International TV on YouTube Live" title="Watch CFMI TV on YouTube Live"><img src="assets/cfmi-tv-splash.webp" alt="Welcome to Consuming Fire Ministries International TV — click to watch YouTube Live"></a>
           </div>
         </div>
         <aside class="live-info">
@@ -308,7 +313,7 @@
           <h3>Worship with us</h3>
           <p>Join our services, worship, prayer and the teaching of God’s Word. If the player does not show a broadcast, visit our official YouTube channel to check for a live or scheduled service.</p>
           <div class="live-actions"><a class="social-image-button youtube-button" href="https://www.youtube.com/channel/UC_Q8Nerdc368QOHyoJnsR3w/live" target="_blank" rel="noopener noreferrer" aria-label="Open CFMI YouTube Live"><img src="assets/youtube.webp" alt="YouTube logo"><span>Watch YouTube Live ↗</span></a><a class="social-image-button facebook-button" href="https://www.facebook.com/consumingfireministriesZimbabwe/" target="_blank" rel="noopener noreferrer" aria-label="Open CFMI Facebook"><img src="assets/facebook-3d-icon.webp" alt="Facebook logo"><span>Visit Facebook ↗</span></a></div>
-          <p class="live-note">Join us here when our live broadcast begins.</p>
+          <p class="live-note" id="live-platform-note">YouTube's channel live player checks for CFMI's current broadcast. Use the controls above to switch platform, refresh, or open full screen. These controls do not start or stop a broadcast.</p>
         </aside>
       </div>
     </section>
@@ -322,7 +327,7 @@
     </section>
     <section class="contact" id="contact"><div><div class="eyebrow light"><span></span>Connect with us</div><h2>Let's grow in faith <em>together.</em></h2><p>For prayer, ministry enquiries, or further information, get in touch with CFMI through our official social channels.</p></div><div class="contact-actions"><a class="btn btn-whatsapp" href="https://wa.me/263772479159" target="_blank" rel="noopener noreferrer">Chat on WhatsApp ↗</a><a class="btn btn-gold" href="https://www.facebook.com/consumingfireministriesZimbabwe/" target="_blank" rel="noopener noreferrer">Message on Facebook ↗</a><a class="btn btn-outline" href="https://www.youtube.com/@consumingfireministriesint5007" target="_blank" rel="noopener noreferrer">Watch on YouTube ▶</a></div></section>
   </main>
-  <footer class="footer"><div class="footer-main"><div class="footer-brand"><img src="assets/cfmi-logo-short.png" alt="CFMI logo"><span><strong>CONSUMING FIRE</strong><small>MINISTRIES INTERNATIONAL</small></span></div><div class="footer-social"><a href="https://www.youtube.com/@consumingfireministriesint5007" target="_blank" rel="noopener noreferrer">YouTube ↗</a><a href="https://www.facebook.com/consumingfireministriesZimbabwe/" target="_blank" rel="noopener noreferrer">Facebook ↗</a></div></div><div class="footer-bottom"><span>© <span id="year"></span> Consuming Fire Ministries International.</span><span>Great is Thy faithfulness.</span></div></footer>
+  <footer class="footer"><div class="footer-main"><div class="footer-brand"><img src="assets/cfmi-logo-short.png" alt="CFMI logo"><span><strong>CONSUMING FIRE</strong><small>MINISTRIES INTERNATIONAL</small></span></div><div class="footer-social"><a href="community.html">Prayer &amp; Testimonies</a><a href="https://www.youtube.com/@consumingfireministriesint5007" target="_blank" rel="noopener noreferrer">YouTube ↗</a><a href="https://www.facebook.com/consumingfireministriesZimbabwe/" target="_blank" rel="noopener noreferrer">Facebook ↗</a></div></div><div class="footer-bottom"><span>© <span id="year"></span> Consuming Fire Ministries International.</span><span>Great is Thy faithfulness.</span></div></footer>
   <a class="floating-whatsapp" href="https://wa.me/263772479159" target="_blank" rel="noopener noreferrer" aria-label="Chat with CFMI on WhatsApp"><span class="wa-icon">↗</span><span>Chat with us</span></a>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
@@ -416,6 +421,20 @@
 })();
 </script>
 
+
+
+<script>
+(()=>{
+ const frame=document.getElementById('cfmi-live-iframe'); if(!frame)return;
+ const yt='https://www.youtube.com/embed/live_stream?channel=UC_Q8Nerdc368QOHyoJnsR3w';
+ const fbPage='https://www.facebook.com/consumingfireministriesZimbabwe/';
+ const fbEmbed='https://www.facebook.com/plugins/page.php?href='+encodeURIComponent(fbPage)+'&tabs=timeline&width=900&height=540&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false';
+ const splash=document.getElementById('live-tv-image-button'),note=document.getElementById('live-platform-note');
+ const ytBtn=document.getElementById('stream-youtube'),fbBtn=document.getElementById('stream-facebook');let platform='youtube';
+ function choose(next,refresh=false){platform=next;const isYT=platform==='youtube';frame.title=isYT?'Consuming Fire Ministries International YouTube live stream':'Consuming Fire Ministries International Facebook page';frame.src=(isYT?yt:fbEmbed)+(refresh?'&cfmi_refresh='+Date.now():'');splash.style.display=isYT?'block':'none';ytBtn.setAttribute('aria-pressed',String(isYT));fbBtn.setAttribute('aria-pressed',String(!isYT));ytBtn.classList.toggle('btn-gold',isYT);ytBtn.classList.toggle('btn-outline',!isYT);fbBtn.classList.toggle('btn-gold',!isYT);fbBtn.classList.toggle('btn-outline',isYT);note.textContent=isYT?'YouTube checks for CFMI’s current live broadcast automatically. If a broadcast is not available, check the official channel.':'Facebook page posts and public videos are shown where Facebook permits embedding. If the current live video does not appear, open CFMI’s Facebook page using the link beside the player. Facebook does not expose a reliable current-live-video embed to a static website without additional API setup.';}
+ ytBtn.addEventListener('click',()=>choose('youtube'));fbBtn.addEventListener('click',()=>choose('facebook'));document.getElementById('stream-refresh').addEventListener('click',()=>choose(platform,true));document.getElementById('stream-fullscreen').addEventListener('click',async()=>{const target=document.getElementById('live-player-wrap');try{if(document.fullscreenElement)await document.exitFullscreen();else await target.requestFullscreen();}catch(_){note.textContent='Full screen is unavailable in this browser. Use the player’s own full-screen control instead.';}});
+})();
+</script>
 
 <script src="assets/js/reading-plan.js"></script>
 <script>if("serviceWorker" in navigator && /^https?:$/.test(location.protocol)){window.addEventListener("load",()=>navigator.serviceWorker.register("./service-worker.js").catch(()=>{}),{once:true});}</script>
