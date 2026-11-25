@@ -62,10 +62,10 @@
     .slideshow-stage{position:relative;isolation:isolate;width:100%;height:clamp(420px,56.25vw,760px);min-height:420px;max-height:760px;overflow:hidden;background:#090b10;display:flex;align-items:center;justify-content:center}
     .slide{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;z-index:0;transform:scale(1.035);transition:opacity 1.05s ease,transform 6.5s cubic-bezier(.2,.65,.3,1),visibility 1.05s}
     .slide.active{opacity:1;visibility:visible;z-index:1;transform:scale(1)}
-    /* Poster slides are shown cleanly, without the photo tint or homepage overlay copy. */
     .slideshow-stage.poster-active .slideshow-shade,
     .slideshow-stage.poster-active .slideshow-caption,
     .slideshow-stage.poster-active .slideshow-foot{display:none}
+    .slide.poster-slide img{object-fit:contain;object-position:center;background:#090b10}
     .slide img{display:block;width:100%;height:100%;object-fit:contain;object-position:center;background:#090b10}
     .slideshow-shade{position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(90deg,rgba(5,7,12,.78) 0%,rgba(5,7,12,.45) 35%,rgba(5,7,12,.06) 75%),linear-gradient(0deg,rgba(5,7,12,.62),transparent 32%)}
     .slideshow-caption{position:absolute;z-index:4;left:8.2%;bottom:16%;max-width:min(520px,72%);text-shadow:0 2px 16px #000b;pointer-events:none}
@@ -162,7 +162,7 @@
         <div class="slide" aria-hidden="true"><img src="assets/homepage-slideshow/cfmi-preaching-original.webp" alt="Pastor preaching at a church service"></div>
         <div class="slide" aria-hidden="true"><img src="assets/homepage-slideshow/cfmi-prayer-original.jpg" alt="Prayer ministry at church"></div>
         <div class="slide" aria-hidden="true"><img src="assets/homepage-slideshow/cfmi-church-family-original.webp" alt="CFMI church family and ministry team"></div>
-        <div class="slide poster-slide" aria-hidden="true"><img src="assets/homepage-slideshow/cfmi-church-services-poster.png" alt="CFMI church services poster"></div>
+        <div class="slide poster-slide" aria-hidden="true"><img src="assets/homepage-slideshow/cfmi-church-services-poster.png" alt="Consuming Fire Ministries International church services poster"></div>
         <div class="slide poster-slide" aria-hidden="true"><img src="assets/homepage-slideshow/cfmi-do-not-miss-services-poster.png" alt="Do not miss CFMI church services poster"></div>
         <div class="slideshow-shade" aria-hidden="true"></div>
         <div class="slideshow-caption">
